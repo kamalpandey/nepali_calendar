@@ -4,7 +4,7 @@ module NepaliCalendar
   class Calendar
 
     attr_accessor :view_context, :options, :year, :month,
-                  :day, :wday, :month_name, :wday_name
+                  :day, :wday, :y_name, :month_name, :wday_name, :day_unicode
 
     def initialize(view_context, options={})
       @view_context = view_context
@@ -12,8 +12,10 @@ module NepaliCalendar
       @month = options[:month]
       @day = options[:day]
       @wday = options[:wday]
+      @y_name = options[:y_name]
       @month_name = options[:month_name]
       @wday_name = options[:wday_name]
+      @day_unicode = options[:day_unicode]
     end
 
     def render(&block)
@@ -29,7 +31,7 @@ module NepaliCalendar
 
     # Overrides the default inspect method with a human readable one, e.g., "Sombar, 21 Magh 2072"
     def readable_inspect
-      "#{wday_name}, #{day} #{month_name}, #{year}"
+      "#{wday_name}, #{day_unicode} #{month_name}, #{y_name}"
     end
     alias_method :default_inspect, :inspect
     alias_method :inspect, :readable_inspect

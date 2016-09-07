@@ -12,7 +12,7 @@ A Ruby gem for generating Nepali Calendar (Bikram Sambat Calendar). You can also
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nepali_calendar'
+gem 'nepali_calendar', github: 'aryalsan/nepali_calendar'
 ```
 
 And then execute:
