@@ -1,6 +1,6 @@
 module NepaliCalendar
   class BsCalendar < NepaliCalendar::Calendar
-    YUNICODE = %w{nil २०७३ २०७४ २०७५ २०७६ २०७७ २०७८ २०७९ २०८०}
+    YUNICODE = %w{nil २००० २००१ २००२ २००३ २००४ २००५ २००६ २००७ २००८ २००९ २०१० २०११ २०१२ २०१३ २०१४ २०१५ २०१६ २०१७ २०१८ २०१९ २०२० २०२१ २०२२ २०२३ २०२४ २०२५ २०२६ २०२७ २०२८ २०२९ २०३० २०३१ २०३२ २०३३ २०३४ २०३५ २०३६ २०३७ २०३८ २०३९ २०४० २०४१ २०४२ २०४३ २०४४ २०४५ २०४६ २०४७ २०४८ २०४९ २०५० २०५१ २०५२ २०५३ २०५४ २०५५ २०५६ २०५७ २०५८ २०५९ २०६० २०६१ २०६२ २०६३ २०६४ २०६५ २०६६ २०६७ २०६८ २०६९ २०७० २०७१ २०७२ २०७३ २०७४ २०७५ २०७६ २०७७ २०७८ २०७९ २०८० २०८१ २०८२ २०८३ २०८४ २०८५ २०८६ २०८७ २०८८ २०८९ २०९०}
     MONTHNAMES = %w{nil बैसाख जेष्ठ आषाड शार्वन भाद्र आश्विन कार्तिक मंसिर पौस माघ फाल्गुन चैत्र}
     DAYNAMES = %w{nil आइतबार सोमबार मंगलबार बुधबार बिहिबार शुक्रबार शनिवार}
     DAY = %w{nil १ २ ३ ४ ५ ६ ७ ८ ९ १० ११ १२ १३ १४ १५ १६ १७ १८ १९ २० २१ २२ २३ २४ २५ २६ २७ २८ २९ ३० ३१ ३२}
@@ -124,7 +124,7 @@ module NepaliCalendar
         wday_name = DAYNAMES[date[:wday]]
         day_unicode = DAY[date[:day]]
         option = { year: date[:year], month: date[:month], day: date[:day],
-          wday: date[:wday], month_name: month_name, wday_name: wday_name, day_unicode: day_unicode }
+          wday: date[:wday], y_name: y_name, month_name: month_name, wday_name: wday_name, day_unicode: day_unicode }
         new('', option)
       end
 
