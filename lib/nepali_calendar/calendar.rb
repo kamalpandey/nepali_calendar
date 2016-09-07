@@ -31,7 +31,7 @@ module NepaliCalendar
 
     # Overrides the default inspect method with a human readable one, e.g., "Sombar, 21 Magh 2072"
     def readable_inspect
-      "#{wday_name}, #{day_unicode} #{month_name}, #{y_name}"
+      "#{month_name} #{day_unicode}, #{year}"
     end
     alias_method :default_inspect, :inspect
     alias_method :inspect, :readable_inspect
