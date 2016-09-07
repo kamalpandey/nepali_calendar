@@ -1,8 +1,8 @@
 module NepaliCalendar
   class BsCalendar < NepaliCalendar::Calendar
 
-    MONTHNAMES = %w{nil Baisakh Jestha Ashad Shrawn Bhadra Ashwin Kartik Mangshir Poush Magh Falgun Chaitra}
-    DAYNAMES = %w{nil Aitabar Sombar Mangalbar Budhbar Bihibar Sukrabar Sanibar}
+    MONTHNAMES = %w{nil बैसाख जेष्ठ आषाड शार्वन भाद्र आश्विन कार्तिक मंसिर पौस माघ फाल्गुन चैत्र}
+    DAYNAMES = %w{nil आइतबार सोमबार मंगलबार बुधबार बिहिबार शुक्रबार शनिवार}
 
     class << self
       def ad_to_bs(year, month, day)
